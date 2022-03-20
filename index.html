@@ -12,7 +12,8 @@
     <!-- FONT AWESOME -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css" />
 
-
+    <!-- JQUERY NICE SELECT -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/css/nice-select.min.css" />
     
     <!-- CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
@@ -42,7 +43,7 @@
             </ul>
         </nav>
         <div class="top-btn">
-            <button class="btn">Let's Talk</button>
+            <button class="btn">Let's Talk<i class="fas fa-long-arrow-alt-right"></i></button>
         </div>
     </div>
    </header>
@@ -140,7 +141,7 @@
 
     <!-- EXPERIENCE SECTION START -->
 
-    <div class="section-wrapper">
+    <div class="section-wrapper-bg">
         <section class="experience sec-padding">
             <div class="container">
                 <div class="exp-container">
@@ -241,57 +242,63 @@
                 <div class="portfolio">
                     <div class="filter">
                         <ul>
-                            <li class="active">All</li>
-                            <li>Design</li>
-                            <li>Motions</li>
-                            <li>Graphics</li>
-                            <li>Branding</li>
+                            <li class="active filter-btn" data-filter="*">All</li>
+                            <li class="filter-btn" data-filter=".design">Design</li>
+                            <li class="filter-btn" data-filter=".motions">Motions</li>
+                            <li class="filter-btn" data-filter=".graphics">Graphics</li>
+                            <li class="filter-btn" data-filter=".branding">Branding</li>
                         </ul>
                     </div>
                     <div class="items-wrapper">
-                        <div class="single-items">
+                        <div class="single-items mix graphics motions">
                             <div class="img-box">
                                 <img src="/assets/images/portfolio/05.jpg" alt="">
+                                <a class="portfolio-details"></a>
                             </div>
                             <div class="bottom-contents">
                                 <h4>Digital Agency Template</h4>
                                 <p>Marketing Strategy</p>
                             </div>
-                        </div><div class="single-items">
+                        </div><div class="single-items mix design branding motions">
                             <div class="img-box">
                                 <img src="/assets/images/portfolio/06.jpg" alt="">
+                                <a class="portfolio-details"></a>
                             </div>
                             <div class="bottom-contents">
                                 <h4>Chatbot Web Template</h4>
                                 <p>Marketing Strategy</p>
                             </div>
-                        </div><div class="single-items">
+                        </div><div class="single-items mix design motions branding">
                             <div class="img-box">
                                 <img src="/assets/images/portfolio/07.jpg" alt="">
+                                <a class="portfolio-details"></a>
                             </div>
                             <div class="bottom-contents">
                                 <h4>AI Agency Template</h4>
                                 <p>Marketing Strategy</p>
                             </div>
-                        </div><div class="single-items">
+                        </div><div class="single-items mix design graphics">
                             <div class="img-box">
                                 <img src="/assets/images/portfolio/08.jpg" alt="">
+                                <a class="portfolio-details"></a>
                             </div>
                             <div class="bottom-contents">
                                 <h4>Fitness Program Template</h4>
                                 <p>Marketing Strategy</p>
                             </div>
-                        </div><div class="single-items">
+                        </div><div class="single-items mix branding motions ">
                             <div class="img-box">
                                 <img src="/assets/images/portfolio/09.jpg" alt="">
+                                <a class="portfolio-details"></a>
                             </div>
                             <div class="bottom-contents">
                                 <h4>Digital Agency Template</h4>
                                 <p>Marketing Strategy</p>
                             </div>
-                        </div><div class="single-items">
+                        </div><div class="single-items mix motions design graphics">
                             <div class="img-box">
                                 <img src="/assets/images/portfolio/10.jpg" alt="">
+                                <a class="portfolio-details"></a>
                             </div>
                             <div class="bottom-contents">
                                 <h4>E-mall Template</h4>
@@ -304,8 +311,60 @@
 
     </div>
     
-
     <!-- CONSULTATION SECTION START -->
+
+    <section class="consultation">
+        <div class="container">
+           <div class="section-wrapper">
+            <div class="form-consultation">
+                <div class="form-top">
+                    <h4>Free Consultation</h4>
+                    <p>Get More SEO Updates</p>
+                </div>
+                <div class="form-body">
+                    <form action="#">
+                        <div class="input-field">
+                            <input type="text" class="form-control" placeholder="Full Name">
+                        </div>
+                        <div class="input-field">
+                            <input type="text" class="form-control" placeholder="Email Address">
+                        </div>
+                        <div class="input-field">
+                            <input type="text" class="form-control" placeholder="Phone Number">
+                        </div>
+                        <div class="input-field">
+                            <select name="select" id="select">
+                                <option value="sub" disabled selected>Subject</option>
+                                <option value="sub">Subject 01</option>
+                                <option value="sub">Subject 02</option>
+                                <option value="sub">Subject 03</option>
+                            </select>
+                        </div>
+                        <div class="input-field">
+                            <button type="submit" class="btn">Get Consultation</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="consultation-right">
+                <div class="img-wrapper">
+                    <div class="img-one">
+                        <img src="/assets/images/consultation/01.jpg" alt="">
+                    </div>
+                    <div class="img-two">
+                        <img src="/assets/images/consultation/02.jpg" alt="">
+                    </div>
+                    <div class="img-three">
+                        <img src="/assets/images/consultation/03.jpg" alt="">
+                    </div>
+                    <div class="img-four">
+                        <img src="/assets/images/consultation/04.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+           </div>
+        </div>
+    </section>
 
     <!-- CTA (Call to Action) SECTION START -->
 
@@ -329,6 +388,14 @@
     <!-- WAYPOINTS -->
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+
+    <!-- MIXIT UP CDN -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mixitup/3.3.1/mixitup.min.js" ></script>
+
+    <!-- JQUERY NICE SELECT -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/js/jquery.nice-select.min.js"></script>
 
     <!-- MAIN JS -->
     <script src="assets/js/main.js"></script>

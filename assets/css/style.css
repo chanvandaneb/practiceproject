@@ -217,6 +217,25 @@ header .header {
 
 /* ----- SERVICES SECTION ----- */
 
+.section-wrapper-bg {
+    position: relative;
+    z-index: 1;
+}
+
+.section-wrapper-bg::before {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-image: url(/assets/images/experience/blob-shape.png);
+    background-repeat: no-repeat;
+    background-position: left top;
+    z-index: -1;
+    opacity: 0.06;
+}
+
 .sec-padding {
     padding-top: 150px;
     padding-bottom: 135px;
@@ -381,8 +400,290 @@ header .header {
 
 /* ----- PROJECTS SECTION ----- */
 
+.projects .section-title {
+    text-align: center;
+}
+
+.projects .portfolio .filter {
+    text-align: center;
+    margin: 50px auto;
+}
+
+.projects .portfolio .filter ul li {
+    display: inline-block;
+    font-family: var(--font-quicksand);
+    font-weight: 700;
+    font-size: 17px;
+    background: transparent;
+    border: 1px solid transparent;
+    color: var(--color-secondary);
+    margin: 3px;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.projects .portfolio .filter ul li.active {
+    background: var(--color-white);
+    border-color: var(--color-secondary);
+}
+
+.projects .portfolio .items-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+.projects .portfolio .items-wrapper .single-items {
+    flex-basis: calc(33% - 30px);
+    margin: 0 15px;
+    position: relative;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.projects .portfolio .items-wrapper .single-items .img-box {
+    position: relative;
+    z-index: 1;
+}
+
+.projects .portfolio .items-wrapper .single-items .img-box .portfolio-details {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--color-secondary);
+    z-index: 2;
+    opacity: 0;
+    transition: all 0.5s ease;
+}
+
+.projects .portfolio .items-wrapper .single-items .img-box .portfolio-details::before {
+    position: absolute;
+    content: '';
+    top: 50%;
+    left: 50%;
+    width: 80px;
+    height: 2px;
+    background-color: var(--color-white);
+    transform: translate(-50%, -50%) scale(0.4);
+    transition: all .4s ease;
+}
+
+.projects .portfolio .items-wrapper .single-items .img-box .portfolio-details::after {
+    position: absolute;
+    content: '';
+    top: 50%;
+    left: 50%;
+    width: 2px;
+    height: 80px;
+    background-color: var(--color-white);
+    transform: translate(-50%, -50%) scale(0.4);    
+    transition: all .4s ease;
+}
+
+.projects .portfolio .items-wrapper .single-items:hover .img-box .portfolio-details {
+    opacity: 0.75;
+}
+
+.projects .portfolio .items-wrapper .single-items:hover .img-box .portfolio-details::before {
+    transform: translate(-50%, -50%) scale(1);   
+}
+
+.projects .portfolio .items-wrapper .single-items:hover .img-box .portfolio-details::after {
+    transform: translate(-50%, -50%) scale(1);   
+}
+
+.projects .portfolio .items-wrapper .single-items .bottom-contents {
+    text-align: center;
+    margin: 30px auto 50px;
+}
+
+.projects .portfolio .items-wrapper .single-items .bottom-contents h4 {
+    font-size: 24px;
+    /* font-weight: 600; */
+    margin-bottom: 5px;
+}
+
+.projects .portfolio .items-wrapper .single-items .bottom-contents p {
+    font-weight: 600;
+    line-height: 1.4;
+}
 
 /* ----- CONSULTATION SECTION ----- */
+
+.consultation {
+    padding-top: 130px;
+    padding-bottom: 120px;
+    background-image: url(/assets/images/consultation/consultation-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    position: relative;
+    z-index: 1;
+}
+
+.consultation::before {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-image: url(/assets/images/consultation/triangle-pattern.png);
+    background-repeat: no-repeat;
+    background-position: left center;
+}
+
+.consultation::after {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: -10%;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-image: url(/assets/images/consultation/blob-white.png);
+    background-size: 35%;
+    background-repeat: no-repeat;
+    background-position: right center;
+}
+
+.consultation .section-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.consultation .section-wrapper .form-consultation {
+    flex-basis: 40%;
+    padding: 80px 50px 70px 50px;
+    background-color: var(--color-white);
+    box-shadow: 0px 10px 60px 0px rgba(38 103 255 / 20%);
+    border-radius: 12px;
+    position: relative;
+    z-index: 1;
+}
+
+.consultation .section-wrapper .form-consultation::before {
+    position: absolute;
+    content: '';
+    top: 20px;
+    left: 15px;
+    right: 15px;
+    height: 100%;
+    z-index: -1;
+    border-radius: 12px;
+    background: var(--color-white);
+    opacity: 0.7;
+}
+
+.form-consultation .form-top {
+    margin-bottom: 40px;
+
+}
+
+.form-consultation .form-top h4 {
+    font-size: 30px;
+    margin-bottom: 5px;
+}
+
+.form-consultation .form-body .input-field {
+    margin-bottom: 15px;
+}
+
+.form-consultation .form-body .input-field input, .form-consultation .form-body .input-field .nice-select {
+    padding: 20px 0 20px 20px;
+    background: var(--color-primary-7);
+    border: none;
+    width: 100%;
+    border-radius: 5px;
+    border: 2px solid transparent;
+    transition: all 0.3s;
+    padding-left: 20px;
+}
+
+.form-consultation .form-body .input-field .nice-select {
+    padding: 0 20px;
+    font-family: var(--font-nunito);
+    font-size: 18px;
+    height: 60px;
+    line-height: 60px;
+    font-weight: 600;
+    color: var(--color-secondary);
+    margin-bottom: 20px;
+}
+
+.form-consultation .form-body .input-field .nice-select .list {
+    width: 100%;
+}
+
+.form-consultation .form-body .input-field input::placeholder {
+    font-size: 18px;
+    color: var(--color-secondary);
+    font-weight: 600;
+    font-weight: var(--font-nunito);
+
+}
+
+.form-consultation .form-body .input-field input:focus, select:focus {
+    border: 2px solid var(--color-primary);
+    outline: none;
+    background: transparent;
+}
+
+.consultation .section-wrapper .consultation-right {
+    flex-basis: calc(60% - 70px);
+    padding-left: 70px;
+}
+
+.consultation-right .img-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.consultation-right .img-wrapper .img-one {
+    flex: 0 0 60%;
+    padding: 15px;
+}
+
+.consultation-right .img-wrapper .img-one img {
+    border-radius: 0 50% 50% 50%;
+    transition: all .4s ease;
+}
+
+.consultation-right .img-wrapper .img-one:hover img {
+    border-radius: 50% 0 50% 50%;
+}
+
+.consultation-right .img-wrapper .img-two {
+    flex: 0 0 40%;
+    padding: 15px;
+}
+
+
+
+.consultation-right .img-wrapper .img-three {
+    flex: 0 0 55%;
+    padding: 15px;
+}
+
+.consultation-right .img-wrapper .img-four {
+    flex: 0 0 28%;
+    padding: 15px;
+}
+
+.consultation-right .img-wrapper .img-four img {
+    border-radius: 50% 50% 0 50%;
+    transition: all .4s ease;
+}
+
+.consultation-right .img-wrapper .img-four:hover img {
+    border-radius: 50% 50% 50% 0;
+}
 
 
 /* ----- CTA (Call to Action) SECTION ----- */
