@@ -530,10 +530,11 @@ header .header {
 /* ----- CONSULTATION SECTION ----- */
 
 .consultation {
+    height: 100%;
+    width: 100%;
     padding-top: 130px;
     padding-bottom: 120px;
     background-image: url(/assets/images/consultation/consultation-bg.jpg);
-    background-repeat: no-repeat;
     background-size: 100%;
     position: relative;
     z-index: 1;
@@ -556,12 +557,12 @@ header .header {
     position: absolute;
     content: '';
     top: 0;
-    left: -10%;
+    right: 10%;
     width: 100%;
     height: 100%;
     z-index: -1;
     background-image: url(/assets/images/consultation/blob-white.png);
-    background-size: 35%;
+    /* background-size: 35%; */
     background-repeat: no-repeat;
     background-position: right center;
 }
